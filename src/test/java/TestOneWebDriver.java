@@ -68,13 +68,13 @@ public class TestOneWebDriver {
         WebElement loginButtonCSS = Driver.findElement(By.cssSelector("#SubmitButton"));
         WebElement loginButtonXPath = Driver.findElement(By.xpath(".//*[@id='SubmitButton']"));
 
-        WebElement signOutLinkCSS = Driver.findElement(By.cssSelector("a[title='Sign out']>ins"));
+        WebElement signOutLinkCSS = Driver.findElement(By.cssSelector("a[title='Sign out']"));
         WebElement signOutLinkXPath = Driver.findElement(By.xpath(".//a[@title='Sign out']"));
 
         WebElement allOfficesLinksCSS = Driver.findElement(By.cssSelector(".officeShortInfo a"));
         WebElement ollOfficesLinksXPath = Driver.findElement(By.xpath("//*[contains(@class, 'officeShortInfo')]/li/a"));
 
-        WebElement chapaeve118LinkCSS = Driver.findElement(By.cssSelector(".officeShortInfo a"));
+        WebElement chapaeve118LinkCSS = Driver.findElement(By.cssSelector(".officeShortInfo a[href*='118']"));
         WebElement chapaeve118LinkXPath = Driver.findElement(By.xpath(".//a[text()=\"Chapaeva 118\"]"));
 
         WebElement lunchVotingLinkCSS = Driver.findElement(By.cssSelector("a[href*=\"lunchvoting\"]"));
@@ -89,8 +89,8 @@ public class TestOneWebDriver {
         WebElement allCompaniesContainerCSS = Driver.findElement(By.cssSelector("li[class|='company']"));
         WebElement allCompaniesContainerXPath = Driver.findElement(By.xpath(".//*[contains(@class, \"company-record\")]"));
 
-        WebElement universalContactPaneCSS = Driver.findElement(By.cssSelector("#companyHeaders :nth-child(5)"));
-        WebElement universalContactPaneXPath = Driver.findElement(By.xpath(".//*[@id='companyHeaders']/li[5]"));
+        WebElement universalContactPaneCSS = Driver.findElement(By.cssSelector("#companyHeaders a[href*='Contact']"));
+        WebElement universalContactPaneXPath = Driver.findElement(By.xpath(".//*[contains(@href, \"Contact\")]"));
     }
     @AfterMethod
     public void cleanup(){
